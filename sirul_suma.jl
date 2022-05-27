@@ -14,6 +14,10 @@ function suma(k::BigInt)
 
 end
 
+function p_la_k_inmultiat_cu_suma(k)
+return abs(suma(k)-1)*p^k;
+end
+
 
 function ck(k)
 return p^k*(abs(suma(k)-1))
@@ -38,6 +42,6 @@ x_array=Array{BigInt}((10:n));
 # y_array=Array{BigFloat}((1:2));
 # y_array=[cₖ(k) for k in x_array];
 
- y_array=[ck(k) for k in x_array]
+ y_array=[p_la_k_inmultiat_cu_suma(k) for k in x_array]
 
 Plots.plot(x_array,y_array)
