@@ -1,5 +1,5 @@
 using Plots;
-setprecision(10^4)
+setprecision(10^5)
 global Q_1=1;
 global theta=0.5;
 global gamma=0.5;
@@ -34,7 +34,8 @@ function ln(x::BigFloat)
 return log(exp(1),x)
 end
 
-x_array=Array{BigFloat}((2:20))
-y_array=[calc(Valori(k,BigFloat(2.0),BigFloat(3.0))) for k in x_array];
+x_array=Array{BigFloat}((2:40))
+y_array=[calc(Valori(k,BigFloat(1.0),BigFloat(2.0))) for k in x_array];
 #y_array=[calc1(k) for k in x_array];
 Plots.plot(x_array,y_array)
+# function 𝑓″(x)

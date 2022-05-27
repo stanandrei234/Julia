@@ -25,7 +25,7 @@ function calc(k::BigFloat)
     a=abs((0.5^(2^(k+1))-0.5*0.5^(2^k))/(0.5^k+0.5^(2^k)));
     b=abs((0.5^(2^(k))-0.5*0.5^(2^(k-1)))/(0.5^(k-1)+0.5^(2^(k-1))))
 
-    return log2(a)/log2(b)
+    return ln(a)/ln(b)
 
 end  
 
