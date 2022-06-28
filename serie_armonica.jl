@@ -1,9 +1,9 @@
 using Plots;
-setprecision(10^4)
+setprecision(10^3)
 
 
 function suma()
-    x_array=Array{Int}((1:7));
+    x_array=Array{Int}((1:5));
     y_array=Vector{BigFloat}();
     s=BigFloat(0);
     for k in x_array
@@ -13,13 +13,13 @@ function suma()
         end
        
     
-        push!(y_array, abs(BigFloat(s)-BigFloat(pi^2/6)) );
+        push!(y_array, log10(abs(BigFloat(s)-BigFloat(pi^2/6)) ));
     
     end
     return y_array;
 
 end
-x_array=Array{Int}((1:7));
+x_array=Array{Int}((1:5));
 y_array=suma();
 
 #y_array=[calc1(k) for k in x_array];
